@@ -123,7 +123,7 @@
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-patch-check"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
               <p>Certificates Earned</p>
             </div>
           </div>
@@ -249,12 +249,11 @@
             <p><em>Software Engineering graduate with experience in media production...</em></p>
             <ul>
               <li>Bengkalis, Riau, Indonesia</li>
-              <li>+62 822-7890-5387</li>
               <li>fikohjob@gmail.com</li>
             </ul>
-             <a href="assets/cv/CV-Fikrotun-Najichah-Online.pdf" class="btn" download>
-                <i class="bi bi-download"></i> Download CV
-              </a>
+            <a href="assets/cv/CV-Fikrotun-Najichah-Online.pdf" class="btn-download" download>
+              <i class="bi bi-download"></i> Download CV
+            </a>  
           </div><!-- Edn Resume Item -->
 
             <h3 class="resume-title">Education</h3>
@@ -401,6 +400,119 @@
       </div>
 
     </section><!-- /Services Section -->
+    
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Certificates, Trainings & Seminars</h2>
+        <p>List of certifications and training programs I have completed to enhance my skills.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="cert-item">
+              <div class="icon"><i class="bi bi-patch-check"></i></div>
+              <h3>Junior Web Developer</h3>
+              <p>Indonesian Professional Certification Authority - 2024</p>
+              <a class="btn-cert" onclick="openCert('assets/img/sert/junior-web-dev.jpg')">View Certificate</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="cert-item">
+              <div class="icon"><i class="bi bi-patch-check"></i></div>
+              <h3>Practical Office Advanced</h3>
+              <p>Indonesian Professional Certification Authority - 2024</p>
+              <a class="btn-cert" onclick="openCert('assets/img/sert/practical-office-advanced.jpg')">View Certificate</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="cert-item">
+              <div class="icon"><i class="bi bi-patch-check"></i></div>
+              <h3>Cloud Practitioner Essentials</h3>
+              <p>Dicoding - 2023</p>
+              <a class="btn-cert" onclick="openCert('assets/img/sert/Cloud-Practitioner-Essentials.png')">View Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="cert-item">
+              <div class="icon"><i class="bi bi-patch-check"></i></div>
+              <h3>Fundamentals of JavaScript Programming</h3>
+              <p>Dicoding - 2023</p>
+              <a class="btn-cert" onclick="openCert('assets/img/sert/Pemrograman-JavaScript.png')">View Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="cert-item">
+              <div class="icon"><i class="bi bi-patch-check"></i></div>
+              <h3>Introduction to Java Programming</h3>
+              <p>Dicoding - 2022</p>
+              <a class="btn-cert" onclick="openCert('assets/img/sert/Pemrograman-Dengan-Java.png')">View Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="cert-item">
+              <div class="icon"><i class="bi bi-people"></i></div>
+              <h3>Practical Guide to Application Security Auditing Using White Box Techniques</h3>
+              <p>Inixindo - 2023</p>
+              <a class="btn-cert" onclick="openCert('assets/img/sert/Inixindo.png')">View Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="cert-item">
+              <div class="icon"><i class="bi bi-people"></i></div>
+              <h3>Implications of ChatGPT and AI for Higher Education</h3>
+              <p>PERMIKOMNAS Region II - 2023</p>
+              <a class="btn-cert" onclick="openCert('assets/img/sert/Implikasi-chatgpt.png')">View Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="cert-item">
+              <div class="icon"><i class="bi bi-people"></i></div>
+              <h3>AI and Machine Learning in the Industry: Trends and Opportunities</h3>
+              <p>State Polytechnic of Bengkalis - 2023</p>
+              <a class="btn-cert" onclick="openCert('assets/img/sert/seminar-praktisi-polbeng.png')">View Details</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Modal Certificate Viewer -->
+      <div id="certModal" class="cert-modal">
+        <span class="cert-close" onclick="closeCert()">&times;</span>
+        <img id="certImage" class="cert-content">
+      </div>
+
+      <script>
+      function openCert(src) {
+        document.getElementById("certImage").src = src;
+        document.getElementById("certModal").style.display = "block";
+      }
+
+      function closeCert() {
+        document.getElementById("certModal").style.display = "none";
+      }
+
+      // Click outside to close
+      window.onclick = function(event) {
+        const modal = document.getElementById("certModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+
+    </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">

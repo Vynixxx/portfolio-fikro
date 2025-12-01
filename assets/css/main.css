@@ -520,6 +520,15 @@ section,
   z-index: 1;
 }
 
+/* HP dalam mode landscape / desktop mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero img {
+    max-height: 60vh;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
 /* --- Tablet & HP --- */
 @media (max-width: 991px) {
   .hero img {
@@ -992,6 +1001,163 @@ section,
 .services .service-item.item-pink:hover .icon path {
   fill: #f3268c;
 }
+
+/* Tombol Download CV */
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #8252da;
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(130, 82, 218, 0.25);
+}
+
+/* Icon */
+.btn-download i {
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.btn-download:hover {
+  background: #6d3ec2;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(130, 82, 218, 0.35);
+}
+
+.btn-download:hover i {
+  transform: translateY(-2px);
+}
+
+/*--------------------------------------------------------------
+# Serti Section
+--------------------------------------------------------------*/
+.certificates .col-lg-4,
+.certificates .col-md-6 {
+  display: flex;
+}
+.certificates .cert-item {
+  background: var(--surface-color);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.certificates .cert-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 45px rgba(0, 0, 0, 0.1);
+}
+
+.certificates .cert-item .icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  background: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.certificates .cert-item .icon i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.certificates .cert-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.certificates .cert-item p {
+  font-size: 14px;
+  color: var(--default-color);
+  margin-bottom: 15px;
+}
+
+.certificates .btn-cert {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.certificates .btn-cert:hover {
+  background: var(--accent-color-dark);
+}
+
+/* Warna dasar tombol */
+.btn-cert {
+  background: #8252da !important;
+  color: #fff !important;
+  border: none !important;
+  transition: 0.3s ease;
+}
+
+/* Hover tetap ungu, jangan jadi putih */
+.btn-cert:hover {
+  background: #6d3ec2 !important; /* lebih gelap sedikit */
+  color: #fff !important;
+}
+/* Modal background */
+.cert-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.85);
+}
+
+/* Gambar di tengah */
+.cert-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+
+/* Tombol close */
+.cert-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cert-close:hover {
+  color: #8252da;
+}
+
 
 /*--------------------------------------------------------------
 # Testimonials Section
