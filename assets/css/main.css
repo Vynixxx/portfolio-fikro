@@ -598,32 +598,355 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .content h2 {
+
+/* About Profile Layout */
+.about .about-profile {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+
+/*--------------------------------------------------------------
+# Profile Image
+--------------------------------------------------------------*/
+
+.about .about-img-holder {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about .about-image-wrapper {
+  width: 100%;
+  max-width: 360px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.about .about-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+/*--------------------------------------------------------------
+# About Content
+--------------------------------------------------------------*/
+
+.about .about-caption {
+  width: 100%;
+}
+
+.about .about-label {
+  display: inline-block;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 24px;
+  letter-spacing: 2px;
+  color: var(--accent-color);
+  margin-bottom: 8px;
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
+.about .about-heading {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 18px;
 }
 
-.about .content ul li {
-  margin-bottom: 20px;
+.about .about-text {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+
+/*--------------------------------------------------------------
+# Personal Information
+--------------------------------------------------------------*/
+
+.about .about-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.about .info-item {
   display: flex;
   align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 12px;
+  background: color-mix(
+    in srgb,
+    var(--default-color),
+    transparent 95%
+  );
+  transition: all 0.3s ease;
 }
 
-.about .content ul strong {
-  margin-right: 10px;
+.about .info-item:hover {
+  transform: translateY(-3px);
 }
 
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
+.about .info-item > i {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: color-mix(
+    in srgb,
+    var(--accent-color),
+    transparent 88%
+  );
   color: var(--accent-color);
-  line-height: 0;
+  font-size: 18px;
 }
+
+.about .info-item > div {
+  min-width: 0;
+}
+
+.about .info-label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 3px;
+  opacity: 0.65;
+}
+
+.about .info-item strong,
+.about .info-item a {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.about .info-item a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.about .info-item a:hover {
+  text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+# Language Skills
+--------------------------------------------------------------*/
+
+.about .language-section {
+  margin-top: 10px;
+}
+
+.about .language-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.about .language-heading h5 {
+  margin: 3px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.about .language-heading-icon {
+  font-size: 28px;
+  color: var(--accent-color);
+}
+
+
+/* Language Grid */
+.about .language-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+
+/* Language Card */
+.about .language-card {
+  padding: 17px 18px;
+  border: 1px solid color-mix(
+    in srgb,
+    var(--default-color),
+    transparent 88%
+  );
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.about .language-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(
+    in srgb,
+    var(--accent-color),
+    transparent 50%
+  );
+}
+
+
+/* Language Top */
+.about .language-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.about .language-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.about .language-icon {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: color-mix(
+    in srgb,
+    var(--accent-color),
+    transparent 88%
+  );
+  color: var(--accent-color);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+
+/* Language Level */
+.about .language-level {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.7;
+  text-align: right;
+}
+
+
+/* Language Progress Bar */
+.about .lang-bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: color-mix(
+    in srgb,
+    var(--default-color),
+    transparent 90%
+  );
+  overflow: hidden;
+}
+
+.about .lang-bar > div {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent-color);
+  transition: width 1s ease;
+}
+
+
+/*--------------------------------------------------------------
+# Tablet
+--------------------------------------------------------------*/
+
+@media (max-width: 991px) {
+
+  .about .about-profile {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about .about-img-holder {
+    justify-content: center;
+  }
+
+  .about .about-image-wrapper {
+    max-width: 300px;
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+# Mobile
+--------------------------------------------------------------*/
+
+@media (max-width: 767px) {
+
+  .about .about-profile {
+    gap: 30px;
+  }
+
+  .about .about-heading {
+    font-size: 26px;
+  }
+
+  .about .about-text {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  /* Personal Information */
+  .about .about-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .about .info-item {
+    padding: 14px;
+  }
+
+
+  /* Languages */
+  .about .language-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about .language-heading h5 {
+    font-size: 18px;
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+# Small Mobile
+--------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+
+  .about .about-image-wrapper {
+    max-width: 250px;
+  }
+
+  .about .language-top {
+    align-items: flex-start;
+  }
+
+  .about .language-level {
+    max-width: 120px;
+  }
+
+}
+
+
 
 /*--------------------------------------------------------------
 # Stats Section
